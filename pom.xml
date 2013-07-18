@@ -9,7 +9,7 @@
   </parent>
   <groupId>org.exoplatform.integration</groupId>
   <artifactId>integ</artifactId>
-  <version>4.1.0-SNAPSHOT</version>
+  <version>4.1.x-integ-remote-cal-sync-job-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>eXo Integration</name>
   <modules>
@@ -54,7 +54,7 @@
     <org.exoplatform.social.version>4.1.0-SNAPSHOT</org.exoplatform.social.version>
     <org.exoplatform.forum.version>4.1.0-SNAPSHOT</org.exoplatform.forum.version>
     <org.exoplatform.wiki.version>4.1.0-SNAPSHOT</org.exoplatform.wiki.version>
-    <org.exoplatform.calendar.version>4.1.0-SNAPSHOT</org.exoplatform.calendar.version>
+    <org.exoplatform.calendar.version>4.1.x-cal-remote-cal-sync-job-SNAPSHOT</org.exoplatform.calendar.version>
     <!-- Platform Project 3rd party Dependencies -->
     <org.exoplatform.doc.doc-style.version>4.1.0-SNAPSHOT</org.exoplatform.doc.doc-style.version>
   </properties>
