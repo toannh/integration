@@ -55,30 +55,30 @@
       <version>Version: {0}</version>
     </messages>
     <publicationStates>
-      <archived>Archiviato</archived>
-      <obsolete>Obsoleto</obsolete>
-      <unpublished>Non Pubblicato</unpublished>
-      <draft>Bozza</draft>
-      <pending>In sospeso</pending>
-      <approved>Approvato</approved>
-      <inreview>In Revisione</inreview>
-      <staged>In cantiere</staged>
-      <published>Pubblicato</published>
-      <live>Pubblicato</live>
+      <archived>Archived</archived>
+      <obsolete>Obsolete</obsolete>
+      <unpublished>Unpublished</unpublished>
+      <draft>Draft</draft>
+      <pending>Pending</pending>
+      <approved>Approved</approved>
+      <inreview>In Review</inreview>
+      <staged>Staged</staged>
+      <published>Published</published>
+      <live>Published</live>
     </publicationStates>
     <view>View</view>
-    <edit>Modifica</edit>
-    <download>Scarica questo File</download>
+    <edit>Edit</edit>
+    <download>Download</download>
   </SocialIntegration>
   <UIPopupWindow>
     <title>
-      <DocViewer>Anteprima</DocViewer>
+      <DocViewer>Preview</DocViewer>
     </title>
   </UIPopupWindow>
   <ElementSet>
     <dialog>
       <label>       
-        <resourceType>Tipo Risorsa</resourceType>        
+        <resourceType>Resource Type</resourceType>        
       </label>
     </dialog>
   </ElementSet>
