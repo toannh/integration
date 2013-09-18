@@ -30,7 +30,7 @@
       <removeTitle>تمّ حذف العنوان.</removeTitle>
       <removeName>تمّ حذف الاسم.</removeName>
       <removeSummary>تمّ حذف الملخّص.</removeSummary>
-      <removeDescription>لقد تمّ حذف الوصف.</removeDescription>
+      <removeDescription>Description has been removed.</removeDescription>
       <removeCreator>تمّ حذف المؤلف: {0}.</removeCreator>
       <removeMultiCreator>تمّ حذف المؤلفين: {0}.</removeMultiCreator>
       <removeLanguage>تمّ حذف اللّغة.</removeLanguage>
@@ -55,30 +55,30 @@
       <version>الإصدار: {0}</version>
     </messages>
     <publicationStates>
-      <archived>بالأرشيف</archived>
-      <obsolete>عفا عليها الزمن</obsolete>
-      <unpublished>غير منشورة</unpublished>
-      <draft>مسودة</draft>
+      <archived>Archived</archived>
+      <obsolete>Obsolete</obsolete>
+      <unpublished>Unpublished</unpublished>
+      <draft>Draft</draft>
       <pending>في الانتظار</pending>
-      <approved>موافق عليه</approved>
-      <inreview>بحالة مُراجعة</inreview>
-      <staged>جاهز للنّشر</staged>
-      <published>تم نشره</published>
-      <live>تم نشره</live>
+      <approved>Approved</approved>
+      <inreview>In Review</inreview>
+      <staged>Staged</staged>
+      <published>Published</published>
+      <live>Published</live>
     </publicationStates>
-    <view>رأي</view>
+    <view>View</view>
     <edit>تغيير</edit>
-    <download>تنزيل هذا الملف</download>
+    <download>Download</download>
   </SocialIntegration>
   <UIPopupWindow>
     <title>
-      <DocViewer>معاينة</DocViewer>
+      <DocViewer>Preview</DocViewer>
     </title>
   </UIPopupWindow>
   <ElementSet>
     <dialog>
       <label>       
-        <resourceType>نوع المورد</resourceType>        
+        <resourceType>Resource Type</resourceType>        
       </label>
     </dialog>
   </ElementSet>
