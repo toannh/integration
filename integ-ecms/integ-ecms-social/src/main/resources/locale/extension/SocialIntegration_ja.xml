@@ -9,7 +9,7 @@
       <editedBy>が編集されました。編集者：</editedBy>
       <system>システム</system>
       <readmore>...続きを読む.</readmore>
-      <editTitle>タイトルが更新されました： {0}</editTitle>
+      <editTitle>Title has been updated to: {0}</editTitle>
       <editName>名前が更新されました：{0}</editName>
       <editDescription>説明文が更新されました： {0}</editDescription>
       <singleCreator>作成者：{0}</singleCreator>
@@ -55,30 +55,30 @@
       <version>バージョン: {0}</version>
     </messages>
     <publicationStates>
-      <archived>アーカイブ</archived>
+      <archived>Archived</archived>
       <obsolete>廃止されました</obsolete>
-      <unpublished>未公開</unpublished>
-      <draft>草案</draft>
-      <pending>保留中</pending>
-      <approved>承認</approved>
-      <inreview>レビュー中</inreview>
+      <unpublished>Unpublished</unpublished>
+      <draft>Draft</draft>
+      <pending>Pending</pending>
+      <approved>Approved</approved>
+      <inreview>In Review</inreview>
       <staged>承認申請</staged>
-      <published>公開</published>
-      <live>公開</live>
+      <published>Published</published>
+      <live>Published</live>
     </publicationStates>
-    <view>ビュー</view>
-    <edit>編集</edit>
-    <download>ファイルをダウンロード</download>
+    <view>View</view>
+    <edit>Edit</edit>
+    <download>Download</download>
   </SocialIntegration>
   <UIPopupWindow>
     <title>
-      <DocViewer>プレビュー</DocViewer>
+      <DocViewer>Preview</DocViewer>
     </title>
   </UIPopupWindow>
   <ElementSet>
     <dialog>
       <label>       
-        <resourceType>リソースタイプ</resourceType>        
+        <resourceType>Resource Type</resourceType>        
       </label>
     </dialog>
   </ElementSet>
