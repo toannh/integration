@@ -30,7 +30,7 @@
       <removeTitle>Título ha sido eliminado.</removeTitle>
       <removeName>Nombre ha sido eliminado.</removeName>
       <removeSummary>Resumen ha sido eliminado.</removeSummary>
-      <removeDescription>Descripción ha sido eliminado.</removeDescription>
+      <removeDescription>Description has been removed.</removeDescription>
       <removeCreator>Creador: {0} ha sido eliminado.</removeCreator>
       <removeMultiCreator>Creadores: {0} han sido eliminados.</removeMultiCreator>
       <removeLanguage>Idioma ha sido eliminado.</removeLanguage>
@@ -66,19 +66,19 @@
       <published>Publicado</published>
       <live>Publicado</live>
     </publicationStates>
-    <view>Ver</view>
-    <edit>Editar</edit>
-    <download>Descargar</download>
+    <view>View</view>
+    <edit>Edit</edit>
+    <download>Download</download>
   </SocialIntegration>
   <UIPopupWindow>
     <title>
-      <DocViewer>Previsualizar</DocViewer>
+      <DocViewer>Preview</DocViewer>
     </title>
   </UIPopupWindow>
   <ElementSet>
     <dialog>
       <label>       
-        <resourceType>Tipo de Recursos</resourceType>        
+        <resourceType>Resource Type</resourceType>        
       </label>
     </dialog>
   </ElementSet>
