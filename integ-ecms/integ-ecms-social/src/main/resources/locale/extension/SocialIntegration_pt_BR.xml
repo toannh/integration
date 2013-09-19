@@ -9,7 +9,7 @@
       <editedBy>foi editado por</editedBy>
       <system>o sistema</system>
       <readmore>...Ler mais.</readmore>
-      <editTitle>Title has been updated to: {0}</editTitle>
+      <editTitle>O título foi atualizado para: {0}</editTitle>
       <editName>O nome foi atualizado para: {0}</editName>
       <editDescription>A descrição foi atualizada para: {0}</editDescription>
       <singleCreator>O criador é {0}</singleCreator>
@@ -67,8 +67,8 @@
       <live>Publicado</live>
     </publicationStates>
     <view>Visualizar</view>
-    <edit>Edit</edit>
-    <download>Download</download>
+    <edit>Editar</edit>
+    <download>Baixar</download>
   </SocialIntegration>
   <UIPopupWindow>
     <title>
@@ -78,7 +78,7 @@
   <ElementSet>
     <dialog>
       <label>       
-        <resourceType>Resource Type</resourceType>        
+        <resourceType>Tipo de Recurso</resourceType>        
       </label>
     </dialog>
   </ElementSet>
