@@ -30,7 +30,7 @@
       <removeTitle>Der Titel wurde entfernt.</removeTitle>
       <removeName>Der Name wurde entfernt.</removeName>
       <removeSummary>Die Zusammenfassung wurde entfernt.</removeSummary>
-      <removeDescription>Description has been removed.</removeDescription>
+      <removeDescription>Die Beschreibung wurde entfernt.</removeDescription>
       <removeCreator>Der Ersteller {0} wurde entfernt.</removeCreator>
       <removeMultiCreator>Die Ersteller: {0} wurden entfernt.</removeMultiCreator>
       <removeLanguage>Die Sprache wurde entfernt.</removeLanguage>
@@ -63,12 +63,12 @@
       <approved>Genehmigt</approved>
       <inreview>Unter Überprüfung</inreview>
       <staged>bereitgestellt</staged>
-      <published>Published</published>
-      <live>Published</live>
+      <published>Veröffentlicht</published>
+      <live>Veröffentlicht</live>
     </publicationStates>
-    <view>View</view>
-    <edit>Edit</edit>
-    <download>Download</download>
+    <view>Sehen</view>
+    <edit>Bearbeiten</edit>
+    <download>Herunterladen</download>
   </SocialIntegration>
   <UIPopupWindow>
     <title>
