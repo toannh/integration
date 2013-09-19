@@ -9,7 +9,7 @@
       <editedBy>düzenleyen</editedBy>
       <system>Sistem</system>
       <readmore>...Devamını oku.</readmore>
-      <editTitle>Title has been updated to: {0}</editTitle>
+      <editTitle>Başlık güncellendi: {0}</editTitle>
       <editName>Adı güncellendi: {0}</editName>
       <editDescription>Açıklama güncellendi: {0}</editDescription>
       <singleCreator>{0} Yaratıcısıdır</singleCreator>
@@ -59,7 +59,7 @@
       <obsolete>Eskimiş</obsolete>
       <unpublished>Yayınlanmamış</unpublished>
       <draft>Taslak</draft>
-      <pending>Pending</pending>
+      <pending>Bekleyen</pending>
       <approved>Onaylı</approved>
       <inreview>İnceleniyor</inreview>
       <staged>Düzenlendi</staged>
@@ -67,8 +67,8 @@
       <live>Yayınlandı</live>
     </publicationStates>
     <view>Görünüm</view>
-    <edit>Edit</edit>
-    <download>Download</download>
+    <edit>Düzenle</edit>
+    <download>İndir</download>
   </SocialIntegration>
   <UIPopupWindow>
     <title>
