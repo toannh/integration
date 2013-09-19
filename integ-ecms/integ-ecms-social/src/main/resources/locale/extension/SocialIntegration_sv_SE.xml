@@ -59,7 +59,7 @@
       <obsolete>Utgången</obsolete>
       <unpublished>Ej publicerad</unpublished>
       <draft>Utkast</draft>
-      <pending>Pending</pending>
+      <pending>Väntläge</pending>
       <approved>Godkänd</approved>
       <inreview>Under granskning</inreview>
       <staged>Iscensatt</staged>
@@ -67,7 +67,7 @@
       <live>Publicerad</live>
     </publicationStates>
     <view>Visa</view>
-    <edit>Edit</edit>
+    <edit>Redigera</edit>
     <download>Ladda ner</download>
   </SocialIntegration>
   <UIPopupWindow>
