@@ -63,22 +63,22 @@
       <approved>Đã duyệt</approved>
       <inreview>Đang đánh giá</inreview>
       <staged>Đang xem xét</staged>
-      <published>Published</published>
-      <live>Published</live>
+      <published>Xuất bản</published>
+      <live>Xuất bản</live>
     </publicationStates>
-    <view>View</view>
-    <edit>Edit</edit>
+    <view>Xem</view>
+    <edit>Chỉnh sửa</edit>
     <download>Tải về</download>
   </SocialIntegration>
   <UIPopupWindow>
     <title>
-      <DocViewer>Preview</DocViewer>
+      <DocViewer>Xem lại</DocViewer>
     </title>
   </UIPopupWindow>
   <ElementSet>
     <dialog>
       <label>       
-        <resourceType>Resource Type</resourceType>        
+        <resourceType>Loại Tài nguyên</resourceType>        
       </label>
     </dialog>
   </ElementSet>
