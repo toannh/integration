@@ -12,7 +12,7 @@
       <editTitle>Le titre a été mis à jour: {0}</editTitle>
       <editName>Le nom a été mis à jour: {0}</editName>
       <editDescription>La description a été mise à jour: {0}</editDescription>
-      <singleCreator>L''auteur est {0}</singleCreator>
+      <singleCreator>L'auteur est {0}</singleCreator>
       <multiCreator>Les auteurs sont {0}</multiCreator>
       <addSource>La source : {0} a été ajoutée</addSource>
       <addMultiSource>Les sources: {0} ont été ajoutées</addMultiSource>
@@ -31,7 +31,7 @@
       <removeName>Le titre a été supprimé.</removeName>
       <removeSummary>Le sommaire a été supprimé.</removeSummary>
       <removeDescription>La description a été supprimé.</removeDescription>
-      <removeCreator>L''auteur: {0} a été supprimé.</removeCreator>
+      <removeCreator>L'auteur: {0} a été supprimé.</removeCreator>
       <removeMultiCreator>Les auteurs: {0} ont été supprimés.</removeMultiCreator>
       <removeLanguage>La langue a été supprimée.</removeLanguage>
       <removeContent>Le contenu a été supprimé.</removeContent>
