@@ -54,6 +54,7 @@
   //ECMS declare variables - BEGIN
   def activityContentTitle = Text.unescapeIllegalJcrChars(activity.title);
   def docSummary = uicomponent.getDocSummary();
+  
   def activityMessage = uicomponent.getMessage();
   def mimeType = uicomponent.getMimeType();
   def binarySrc;
@@ -72,6 +73,8 @@
     preferenceWS  = currentNode.getSession().getWorkspace().getName();
     fileComponent = uicontentpresentation.getUIComponent(mimeType);
   }
+
+  docSummary = org.exoplatform.wcm.ext.component.activity.listener.Utils.getFirstSummaryLines(docSummary);
 
   def ilBinarySrc = uicomponent.getImagePath();
 
@@ -116,10 +119,10 @@
   def docTypeName = uicomponent.getDocTypeName();
   if(docTypeName == null) docTypeName = "";  
   def docTitle = uicomponent.getDocTitle();
-  def docVersionNo = uicomponent.getDocVersion();
+  def docVersionNo = uicomponent.getVersion(currentNode);
   def docVersion = _ctx.appRes("SocialIntegration.messages.version");
   if (docVersionNo !=null) {
-    docVersion = docVersion.replace("{0}", docVersionNo);
+    docVersion = docVersion.replace("{0}", String.valueOf(docVersionNo));
   } else {
     docVersion = null;
   }
