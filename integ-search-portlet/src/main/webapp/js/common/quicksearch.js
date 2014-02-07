@@ -55,7 +55,7 @@ window.initQuickSearch = function initQuickSearch(portletId,seeAllMsg, noResultM
 		";
         
     var QUICKSEARCH_TABLE_TEMPLATE=" \
-          <table class='uiGrid table table-striped  rounded-corners'> \
+          <table class='uiTable  uiTableStriped  uiTableRounded'> \
             <col width='30%'> \
             <col width='70%'> \
             %{resultRows} \
@@ -114,7 +114,7 @@ window.initQuickSearch = function initQuickSearch(portletId,seeAllMsg, noResultM
     ";  
     
     var QUICKSEARCH_WAITING_TEMPLATE=" \
-        <table class='uiGrid table  table-hover table-striped  rounded-corners'> \
+        <table class='uiTable uiTableHover uiTableStriped  uiTableRounded'> \
           <col width='30%'> \
           <col width='70%'> \
 	        <tr> \
