@@ -202,7 +202,7 @@ public class Utils {
         nodeActivityID = node.getProperty(ActivityTypeUtils.EXO_ACTIVITY_ID).getString();
         exa =  activityManager.getActivity(nodeActivityID);
       }catch (Exception e){
-        //Not activity is deleted, return no related activity
+          LOG.info("No activity is deleted, return no related activity");
       }
     }
     ExoSocialActivity activity = null ;
@@ -274,6 +274,21 @@ public class Utils {
         ActivityTypeUtils.attachActivityId(node, activityId);
       }
       updateMainActivity(activityManager, node, activity);
+        if (node.isNodeType(ActivityTypeUtils.EXO_ACTIVITY_INFO)) {
+            try {
+                nodeActivityID = node.getProperty(ActivityTypeUtils.EXO_ACTIVITY_ID).getString();
+                exa = activityManager.getActivity(nodeActivityID);
+            }catch (Exception e){
+                LOG.info("No activity is deleted, return no related activity");
+            }
+            if (exa!=null && !commentFlag  && isSystemComment) {
+                activityManager.saveComment(exa, activity);
+                if (node.isNodeType(MIX_COMMENT)) {
+                    commentID = activity.getId();
+                    node.setProperty(MIX_COMMENT_ID, commentID);
+                }
+            }
+        }
       return activity;
     }
   }
@@ -318,7 +333,7 @@ public class Utils {
         nodeActivityID = node.getProperty(ActivityTypeUtils.EXO_ACTIVITY_ID).getString();
         exa =  activityManager.getActivity(nodeActivityID);
       }catch (Exception e){
-        //Not activity is deleted, return no related activity
+          LOG.info("No activity is deleted, return no related activity");
       }
     }
     ExoSocialActivity activity = null ;
@@ -386,7 +401,23 @@ public class Utils {
       if (!StringUtils.isEmpty(activityId)) {
         ActivityTypeUtils.attachActivityId(node, activityId);
       }
-      return activity;
+        if (node.isNodeType(ActivityTypeUtils.EXO_ACTIVITY_INFO)) {
+            try {
+                nodeActivityID = node.getProperty(ActivityTypeUtils.EXO_ACTIVITY_ID).getString();
+                exa = activityManager.getActivity(nodeActivityID);
+            }catch (Exception e){
+                LOG.info("No activity is deleted, return no related activity");
+            }
+            if (exa!=null && !commentFlag && isSystemComment) {
+                activityManager.saveComment(exa, activity);
+                if (node.isNodeType(MIX_COMMENT)) {
+                    commentID = activity.getId();
+                    node.setProperty(MIX_COMMENT_ID, commentID);
+                }
+            }
+        }
+
+        return activity;
     }
   }
   
@@ -592,7 +623,8 @@ public class Utils {
         nodeActivityID = node.getProperty(ActivityTypeUtils.EXO_ACTIVITY_ID).getString();
         activityManager.deleteActivity(nodeActivityID);
       }catch (Exception e){
-        //Not activity is deleted, return no related activity
+        LOG.info("No activity is deleted, return no related activity");
+
       }
     }    
   }
