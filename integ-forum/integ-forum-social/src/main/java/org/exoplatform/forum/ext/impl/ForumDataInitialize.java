@@ -170,4 +170,12 @@ public class ForumDataInitialize extends SpaceListenerPlugin {
     
   }
 
+  @Override
+  public void addInvitedUser(SpaceLifeCycleEvent event) {
+  }
+
+  @Override
+  public void addPendingUser(SpaceLifeCycleEvent event) {
+  }
+
 }

@@ -144,4 +144,12 @@ public class AnswerDataInitialize extends SpaceListenerPlugin {
   public void spaceAccessEdited(SpaceLifeCycleEvent event) {    
   }
 
+  @Override
+  public void addInvitedUser(SpaceLifeCycleEvent event) {
+  }
+
+  @Override
+  public void addPendingUser(SpaceLifeCycleEvent event) {
+  }
+
 }

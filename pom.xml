@@ -40,6 +40,7 @@
     <!-- **************************************** -->
     <!-- Project Dependencies                     -->
     <!-- **************************************** -->
+
     <org.exoplatform.depmgt.version>9-upgrade-gatein-3.7.x-SNAPSHOT</org.exoplatform.depmgt.version>
     <!-- JCR Project Dependencies -->
       <org.exoplatform.kernel.version>2.5.0-Alpha4</org.exoplatform.kernel.version>
