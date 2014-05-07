@@ -9,7 +9,7 @@
   </parent>
   <groupId>org.exoplatform.integration</groupId>
   <artifactId>integ</artifactId>
-  <version>4.1.x-SNAPSHOT</version>
+  <version>4.1.x-integ-pkg-improv-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>eXo Integration</name>
   <modules>
@@ -40,7 +40,7 @@
     <!-- **************************************** -->
     <!-- Project Dependencies                     -->
     <!-- **************************************** -->
-    <org.exoplatform.depmgt.version>9-SNAPSHOT</org.exoplatform.depmgt.version>
+    <org.exoplatform.depmgt.version>9-pkg-improv-SNAPSHOT</org.exoplatform.depmgt.version>
     <!-- JCR Project Dependencies -->
       <org.exoplatform.kernel.version>2.4.x-SNAPSHOT</org.exoplatform.kernel.version>
       <org.exoplatform.core.version>2.5.x-SNAPSHOT</org.exoplatform.core.version>
@@ -49,12 +49,12 @@
     <org.gatein.shindig.version>2.0.2.Final-gatein-4</org.gatein.shindig.version>
     <org.gatein.portal.version>3.5.x-PLF-SNAPSHOT</org.gatein.portal.version>
     <!-- Platform Project Dependencies -->
-    <org.exoplatform.commons.version>4.1.x-SNAPSHOT</org.exoplatform.commons.version>
-    <org.exoplatform.ecms.version>4.1.x-SNAPSHOT</org.exoplatform.ecms.version>
-    <org.exoplatform.social.version>4.1.x-SNAPSHOT</org.exoplatform.social.version>
-    <org.exoplatform.forum.version>4.1.x-SNAPSHOT</org.exoplatform.forum.version>
-    <org.exoplatform.wiki.version>4.1.x-SNAPSHOT</org.exoplatform.wiki.version>
-    <org.exoplatform.calendar.version>4.1.x-SNAPSHOT</org.exoplatform.calendar.version>
+    <org.exoplatform.commons.version>4.1.x-commons-pkg-improv-SNAPSHOT</org.exoplatform.commons.version>
+    <org.exoplatform.ecms.version>4.1.x-ecms-pkg-improv-SNAPSHOT</org.exoplatform.ecms.version>
+    <org.exoplatform.social.version>4.1.x-soc-pkg-improv-SNAPSHOT</org.exoplatform.social.version>
+    <org.exoplatform.forum.version>4.1.x-forum-pkg-improv-SNAPSHOT</org.exoplatform.forum.version>
+    <org.exoplatform.wiki.version>4.1.x-wiki-pkg-improv-SNAPSHOT</org.exoplatform.wiki.version>
+    <org.exoplatform.calendar.version>4.1.x-cal-pkg-improv-SNAPSHOT</org.exoplatform.calendar.version>
     <!-- Platform Project 3rd party Dependencies -->
     <org.exoplatform.doc.doc-style.version>4.1.x-SNAPSHOT</org.exoplatform.doc.doc-style.version>
     <!-- For surefire and failsafe to be compatible with jacoco -->
