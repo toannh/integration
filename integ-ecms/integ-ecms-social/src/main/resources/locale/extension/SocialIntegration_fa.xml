@@ -6,9 +6,7 @@
     </titles>
     <messages>
       <createdBy>ایجاد شده توسط</createdBy>
-      <editedBy>ویرایش شده توسط</editedBy>
       <system>سیستم</system>
-      <readmore>... بیشتر بخوانید.</readmore>
       <editTitle>عنوان به روز شد به: {0}</editTitle>
       <editName>نام به روز شده به: {0}</editName>
       <editDescription>توضیحات به روز شده به: {0}</editDescription>
@@ -34,7 +32,6 @@
       <removeCreator>ایجادکننده: {0} حذف شده است.</removeCreator>
       <removeMultiCreator>ایجادکنندگان: {0} حذف شده اند.</removeMultiCreator>
       <removeLanguage>زبان حذف شده است.</removeLanguage>
-      <removeContent>محتوا حذف شده است.</removeContent>
       <attachmentAdded>فایل (ها) پیوست شده (اند).</attachmentAdded>
       <attachmentRemoved>فایل (ها) حذف شده (اند).</attachmentRemoved>
       <categoryAdded>دسته: {0} اضافه شده است.</categoryAdded>
