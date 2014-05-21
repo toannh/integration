@@ -6,9 +6,7 @@
     </titles>
     <messages>
       <createdBy>δημιουργήθηκε από</createdBy>
-      <editedBy>επεξεργάστηκε από</editedBy>
       <system>το σύστημα</system>
-      <readmore>...Διαβάστε περισσότερα.</readmore>
       <editTitle>Ο Τίτλος μεταβλήθηκε σε: {0}</editTitle>
       <editName>Το όνομα άλλαξε σε: {0}</editName>
       <editDescription>Η περιγραφή τροποποιήθηκε σε: {0}</editDescription>
@@ -34,7 +32,6 @@
       <removeCreator>Δημιουργός: {0} έχει αφαιρεθεί.</removeCreator>
       <removeMultiCreator>Δημιουργοί: {0} έχουν αφαιρεθεί.</removeMultiCreator>
       <removeLanguage>Γλώσσα αφαιρέθηκε.</removeLanguage>
-      <removeContent>Περιεχόμενο αφαιρέθηκε.</removeContent>
       <attachmentAdded>Αρχεία έχουν επισυναφθεί.</attachmentAdded>
       <attachmentRemoved>Αρχεία έχουν αφαιρεθεί.</attachmentRemoved>
       <categoryAdded>Κατηγορία: {0} έχει προστεθεί.</categoryAdded>
