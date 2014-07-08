@@ -4,7 +4,7 @@
   <parent>
     <artifactId>maven-parent-pom</artifactId>
     <groupId>org.exoplatform</groupId>
-    <version>12</version>
+    <version>13</version>
     <relativePath />
   </parent>
   <groupId>org.exoplatform.integration</groupId>
@@ -40,14 +40,14 @@
     <!-- **************************************** -->
     <!-- Project Dependencies                     -->
     <!-- **************************************** -->
-    <org.exoplatform.depmgt.version>9-M1</org.exoplatform.depmgt.version>
+    <org.exoplatform.depmgt.version>9-SNAPSHOT</org.exoplatform.depmgt.version>
     <!-- JCR Project Dependencies -->
-      <org.exoplatform.kernel.version>2.4.8-GA</org.exoplatform.kernel.version>
-      <org.exoplatform.core.version>2.5.8-GA</org.exoplatform.core.version>
-      <org.exoplatform.jcr.version>1.15.8-GA</org.exoplatform.jcr.version>
+      <org.exoplatform.kernel.version>2.4.x-SNAPSHOT</org.exoplatform.kernel.version>
+      <org.exoplatform.core.version>2.5.x-SNAPSHOT</org.exoplatform.core.version>
+      <org.exoplatform.jcr.version>1.15.x-SNAPSHOT</org.exoplatform.jcr.version>
     <!-- GateIn Project Dependencies -->
     <org.gatein.shindig.version>2.0.2.Final-gatein-4</org.gatein.shindig.version>
-    <org.gatein.portal.version>3.5.9.Final</org.gatein.portal.version>
+    <org.gatein.portal.version>3.5.x-PLF-SNAPSHOT</org.gatein.portal.version>
     <!-- Platform Project Dependencies -->
     <org.exoplatform.commons.version>4.1.x-commons-skin-module-SNAPSHOT</org.exoplatform.commons.version>
     <org.exoplatform.ecms.version>4.1.x-ecms-skin-module-SNAPSHOT</org.exoplatform.ecms.version>
@@ -56,7 +56,7 @@
     <org.exoplatform.wiki.version>4.1.x-wiki-skin-module-SNAPSHOT</org.exoplatform.wiki.version>
     <org.exoplatform.calendar.version>4.1.x-cal-skin-module-SNAPSHOT</org.exoplatform.calendar.version>
     <!-- Platform Project 3rd party Dependencies -->
-    <org.exoplatform.doc.doc-style.version>4.1.0-SNAPSHOT</org.exoplatform.doc.doc-style.version>
+    <org.exoplatform.doc.doc-style.version>4.1.x-SNAPSHOT</org.exoplatform.doc.doc-style.version>
   </properties>
   <dependencyManagement>
     <!-- ### NEVER CHANGE THIS ORDER OF DEPMGT ### -->
@@ -73,7 +73,14 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-      <!-- Our own project modules -->
+      <!-- Declare our own artifacts -->
+      <dependency>
+        <groupId>org.exoplatform.integration</groupId>
+        <artifactId>integ</artifactId>
+        <version>${project.version}</version>
+        <classifier>source-release</classifier>
+        <type>zip</type>
+      </dependency>
       <dependency>
         <groupId>org.exoplatform.integration</groupId>
         <artifactId>integ-calendar-social</artifactId>

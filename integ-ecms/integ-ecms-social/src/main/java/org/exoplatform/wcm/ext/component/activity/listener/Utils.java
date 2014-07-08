@@ -16,18 +16,6 @@
  */
 package org.exoplatform.wcm.ext.component.activity.listener;
 
-import java.io.InputStream;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Map;
-
-import javax.jcr.Node;
-import javax.jcr.PathNotFoundException;
-import javax.jcr.RepositoryException;
-
 import org.apache.commons.lang.StringUtils;
 import org.exoplatform.commons.utils.ActivityTypeUtils;
 import org.exoplatform.commons.utils.ISO8601;
@@ -45,6 +33,7 @@ import org.exoplatform.services.jcr.ext.hierarchy.NodeHierarchyCreator;
 import org.exoplatform.services.jcr.impl.core.NodeImpl;
 import org.exoplatform.services.log.ExoLogger;
 import org.exoplatform.services.log.Log;
+import org.exoplatform.services.resources.ResourceBundleService;
 import org.exoplatform.services.security.ConversationState;
 import org.exoplatform.services.wcm.core.NodeLocation;
 import org.exoplatform.services.wcm.core.NodetypeConstant;
@@ -60,8 +49,17 @@ import org.exoplatform.social.core.manager.ActivityManager;
 import org.exoplatform.social.core.manager.IdentityManager;
 import org.exoplatform.social.core.space.spi.SpaceService;
 import org.exoplatform.wcm.ext.component.activity.ContentUIActivity;
-import org.exoplatform.webui.application.WebuiRequestContext;
 
+import javax.jcr.Node;
+import javax.jcr.PathNotFoundException;
+import javax.jcr.RepositoryException;
+import java.io.InputStream;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Locale;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 
@@ -442,20 +440,20 @@ public class Utils {
   
   private static void updateNotifyMessages(ExoSocialActivity activity, String activityMsgBundleKey, String systemComment) 
       throws Exception {     
-    WebuiRequestContext context = WebuiRequestContext.getCurrentInstance();
     Locale locale = new Locale("en");
-    ResourceBundle res = context.getApplication().getResourceBundle(locale);
+    ResourceBundleService resourceBundleService = WCMCoreUtils.getService(ResourceBundleService.class);
+    ResourceBundle res = resourceBundleService.getResourceBundle("locale.extension.SocialIntegration", locale);
     StringBuffer sb = new StringBuffer();
     String[] keys = activityMsgBundleKey.split(ActivityCommonService.VALUE_SEPERATOR);
     String[] values = systemComment.split(ActivityCommonService.VALUE_SEPERATOR);
     for (String key : keys) {      
-      String messsage = res.getString(key);
+      String message = res.getString(key);
       if(values.length > 0) {
         for(int i = 0; i < values.length; i++) {
-          messsage = messsage.replace("{"+i+"}", values[i]);          
+          message = message.replace("{"+i+"}", values[i]);
         }
       }
-      sb.append(messsage).append("\n");
+      sb.append(message).append("\n");
     }
     activity.setTitle(sb.toString());
   }
@@ -764,19 +762,31 @@ public class Utils {
   public static String getFirstSummaryLines(String source) {
     return getFirstSummaryLines(source, MAX_SUMMARY_LINES_COUNT);
   }
+  
   // Silly function to convert HTML content to plain text
-  public static String getFirstSummaryLines(String source, int linesCount) {
+  public static String convertHTMLContent(String source){
     String result =  source;
     result = result.replaceAll("(?i)<head>.*</head>", "");
     result = result.replaceAll("(?i)<script.*>.*</script>", "");
     result = result.replaceAll("(?i)<style.*>.*</style>", "");
-    result = result.replaceAll("<([a-z\"]+) *[^/]*?>", "");
+    result = result.replaceAll("<([a-zA-Z\"]+) *[^/]*?>", "");
     result = result.replaceAll("</p>", "<br>");
-    result = result.replaceAll("</([a-z]+) *[^/]*?>", "");
+    result = result.replaceAll("</([a-zA-Z]+) *[^/]*?>", "");
     result = result.replaceAll("([\r\n\t])+", "");
     result = result.replaceAll("^(<br>)", "");
     result = result.replaceAll("(<br>[ \r\t\n]+<br>)", "<br>");
     result = result.replaceAll("(<br>)+", "<br>");
+    return result;
+  }
+  
+  /**
+   * 
+   * @param source
+   * @param linesCount
+   * @return first <code>linesCount<code> without HTML tag
+   */
+  public static String getFirstSummaryLines(String source, int linesCount) {
+    String result =  convertHTMLContent(source);
     int i = 0;
     int index = -1;
     while (true) {
