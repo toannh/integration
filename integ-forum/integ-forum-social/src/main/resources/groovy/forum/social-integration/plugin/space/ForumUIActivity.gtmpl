@@ -189,7 +189,7 @@
 					</div>	
 					<div class="dataInfor">
 						<span class="dateTime"><i class="uiIconClock uiIconLightGray"></i>&nbsp;$activityPostedTime</span> 
-						<% if (uicomponent.isUserActivity() && uicomponent.isSpaceStreamOwner() && !uicomponent.isUISpaceActivitiesDisplay()) {
+						<% if (spaceGroupId.length() > 0) {
 								Space spaceSource = Utils.getSpaceService().getSpaceByPrettyName(streamOwner);
 									def spaceSourceURI = LinkProvider.getSpaceUri(spaceSource.url);
 									def spaceName = spaceSource.displayName;
