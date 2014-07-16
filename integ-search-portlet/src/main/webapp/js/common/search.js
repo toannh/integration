@@ -1,6 +1,6 @@
 (function($){
-
-window.initSearch = function initSearch() {
+  
+window.initSearch = function initSearch(resultsPerPage,searchTypes,searchCurrentSiteOnly,hideSearchForm,hideFacetsFilter,firstInit) {
 
     //*** Global variables ***
     var CONNECTORS; //all registered SearchService connectors
@@ -53,8 +53,30 @@ window.initSearch = function initSearch() {
           %{rating} \
         </div> \
       </div> \
-    ";
-
+    ";    
+      
+    $("document").ready(function(){
+      if (Boolean(firstInit)) {
+        var data = {};
+        if (typeof resultsPerPage != 'undefined') {
+          data["resultsPerPage"] = resultsPerPage;
+        }
+        if (typeof searchTypes != 'undefined') {
+          data["searchTypes"] = searchTypes;
+        }
+        if (typeof searchCurrentSiteOnly != 'undefined') {
+          data["searchCurrentSiteOnly"] = searchCurrentSiteOnly;
+        }
+        if (typeof hideSearchForm != 'undefined') {
+          data["hideSearchForm"] = hideSearchForm;
+        }
+        if (typeof hideFacetsFilter != 'undefined') {
+          data["hideFacetsFilter"] = hideFacetsFilter;
+        }
+        $.post("/rest/search/setting", data);
+      }
+    });  
+    
     //*** Utility functions ***
     String.prototype.toProperCase = function() {
       return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
@@ -671,9 +693,10 @@ window.initSearchSetting = function initSearchSetting(allMsg,alertOk,alertNotOk)
     });
 }
 
-
-initSearch();
-
+/**
+ * Handle error event when image cannot load in unified search
+ * 
+ */
 window.onImgError = function onImgError(object, errorClasses) {
   $(object).parent().empty().append($(document.createElement('i')).addClass(errorClasses));
 }
