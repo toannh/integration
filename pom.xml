@@ -4,7 +4,7 @@
   <parent>
     <artifactId>maven-parent-pom</artifactId>
     <groupId>org.exoplatform</groupId>
-    <version>12</version>
+    <version>13</version>
     <relativePath />
   </parent>
   <groupId>org.exoplatform.integration</groupId>
@@ -43,12 +43,13 @@
 
     <org.exoplatform.depmgt.version>9-upgrade-gatein-3.7.x-SNAPSHOT</org.exoplatform.depmgt.version>
     <!-- JCR Project Dependencies -->
+
       <org.exoplatform.kernel.version>2.5.0-CR2</org.exoplatform.kernel.version>
       <org.exoplatform.core.version>2.6.0-CR2</org.exoplatform.core.version>
       <org.exoplatform.jcr.version>1.16.0-CR2</org.exoplatform.jcr.version>
     <!-- GateIn Project Dependencies -->
     <org.gatein.shindig.version>2.0.2.Final-gatein-4</org.gatein.shindig.version>
-    <org.gatein.portal.version>3.7.0.Final</org.gatein.portal.version>
+    <org.gatein.portal.version>3.7.x-PLF-SNAPSHOT</org.gatein.portal.version>
 
     <!-- Platform Project Dependencies -->
     <org.exoplatform.commons.version>4.1.x-commons-upgrade-gatein-3.7.x-SNAPSHOT</org.exoplatform.commons.version>
@@ -59,6 +60,8 @@
     <org.exoplatform.calendar.version>4.1.x-cal-upgrade-gatein-3.7.x-SNAPSHOT</org.exoplatform.calendar.version>
     <!-- Platform Project 3rd party Dependencies -->
     <org.exoplatform.doc.doc-style.version>4.1.x-SNAPSHOT</org.exoplatform.doc.doc-style.version>
+    <argLine>-Xmx1024m -XX:MaxPermSize=512m</argLine>
+
   </properties>
   <dependencyManagement>
     <!-- ### NEVER CHANGE THIS ORDER OF DEPMGT ### -->
@@ -75,7 +78,14 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-      <!-- Our own project modules -->
+      <!-- Declare our own artifacts -->
+      <dependency>
+        <groupId>org.exoplatform.integration</groupId>
+        <artifactId>integ</artifactId>
+        <version>${project.version}</version>
+        <classifier>source-release</classifier>
+        <type>zip</type>
+      </dependency>
       <dependency>
         <groupId>org.exoplatform.integration</groupId>
         <artifactId>integ-calendar-social</artifactId>

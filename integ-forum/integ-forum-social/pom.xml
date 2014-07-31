@@ -4,7 +4,7 @@
   <parent>
     <artifactId>integ-forum</artifactId>
     <groupId>org.exoplatform.integration</groupId>
-    <version>4.1.x-integ-upgrade-gatein-3.7.x-SNAPSHOT</version>
+  <version>4.1.x-integ-upgrade-gatein-3.7.x-SNAPSHOT</version>
   </parent>
   <artifactId>integ-forum-social</artifactId>
   <packaging>jar</packaging>
@@ -88,6 +88,14 @@
       <groupId>javax.servlet</groupId>
       <artifactId>servlet-api</artifactId>
       <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.exoplatform.commons</groupId>
+      <artifactId>commons-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.exoplatform.commons</groupId>
+      <artifactId>commons-component-common</artifactId>
     </dependency>
     <dependency>
       <groupId>org.exoplatform.commons</groupId>
