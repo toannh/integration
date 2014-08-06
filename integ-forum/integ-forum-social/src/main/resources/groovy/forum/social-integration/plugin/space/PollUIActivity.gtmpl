@@ -171,9 +171,17 @@
     ownerName = profile.fullName;
   }
   def currentTime = System.currentTimeMillis();
+  def isSpaceDeleted = false;
+  def votes = new LinkedHashMap<String, List<String>>();
+  try { 
+    votes = uicomponent.getVotes();
+  }
+  catch (NullPointerException e){    
+    isSpaceDeleted = true;
+  }
   
-  def votes = uicomponent.getVotes();
-  def numberOfVoters = uicomponent.getTotalOfVoters(); 
+  def numberOfVoters = uicomponent.getTotalOfVoters();
+  if (!isSpaceDeleted){
 %>
 
 <div class="activityStream uiPollActivity" id="activityContainer${activity.id}"> 
@@ -418,6 +426,7 @@
   </div> <!-- #boxContainer-->	  
   <% uiform.end() %>
 </div><!--activityStream-->
-<% } else { %> <!-- activity deleted -->
+<% } 
+} else { %> <!-- activity deleted -->
 <div class="activityStream deleted">$labelActivityHasBeenDeleted</div>
 <% }%>
