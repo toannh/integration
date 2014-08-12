@@ -171,17 +171,10 @@
     ownerName = profile.fullName;
   }
   def currentTime = System.currentTimeMillis();
-  def isSpaceDeleted = false;
-  def votes = new LinkedHashMap<String, List<String>>();
-  try { 
-    votes = uicomponent.getVotes();
-  }
-  catch (NullPointerException e){    
-    isSpaceDeleted = true;
-  }
   
-  def numberOfVoters = uicomponent.getTotalOfVoters();
-  if (!isSpaceDeleted){
+  if (!uicomponent.isDeletedSpace(streamOwner)){
+    def votes = uicomponent.getVotes();
+    def numberOfVoters = uicomponent.getTotalOfVoters();
 %>
 
 <div class="activityStream uiPollActivity" id="activityContainer${activity.id}"> 
