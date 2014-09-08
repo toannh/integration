@@ -156,7 +156,7 @@ public class AnswersSpaceActivityPublisher extends AnswerEventListener {
     for (String questionId : questions) {
       try {
         Question question = faqS.getQuestionById(questionId);
-        String activityId = faqS.getActivityIdForQuestion(questionId);
+        String activityId = faqS.getActivityIdForQuestion(question.getPath());
         Identity streamOwner = null;
         Map<String, String> templateParams = updateTemplateParams(new HashMap<String, String>(), question.getId(),
                 ActivityUtils.getQuestionRate(question),
@@ -175,6 +175,7 @@ public class AnswersSpaceActivityPublisher extends AnswerEventListener {
           activityM.deleteActivity(oldActivity);
           Identity userIdentity = identityM.getOrCreateIdentity(OrganizationIdentityProvider.NAME, question.getAuthor(), false);
           ExoSocialActivity activity = newActivity(userIdentity, question.getQuestion(), questionDetail, templateParams);
+          streamOwner = streamOwner != null ? streamOwner : userIdentity;
           activityM.saveActivityNoReturn(streamOwner, activity);
           faqS.saveActivityIdForQuestion(questionId, activity.getId());
           for (Answer answer : question.getAnswers()) {
@@ -499,11 +500,11 @@ public class AnswersSpaceActivityPublisher extends AnswerEventListener {
   }
   
   private String getQuestionMessage(PropertyChangeEvent e, Question question, ExoSocialActivity comment) {
-    String questionName = CommonUtils.decodeSpecialCharToHTMLnumber(question.getQuestion());
     String questionDetail = ActivityUtils.processContent(question.getDetail());
     if ("questionName".equals(e.getPropertyName())) {
-      I18NActivityUtils.addResourceKey(comment, "question-update-title", questionName);
-      return "Title has been updated to: " + questionName;
+      String questionName = question.getQuestion();
+      I18NActivityUtils.addResourceKey(comment, "question-update-title", CommonUtils.decodeSpecialCharToHTMLnumberIgnore(questionName));
+      return "Title has been updated to: " + CommonUtils.decodeSpecialCharToHTMLnumber(questionName);
     } else if ("questionDetail".equals(e.getPropertyName())) {
       I18NActivityUtils.addResourceKey(comment, "question-update-detail", questionDetail);
       return "Details has been edited to: " + questionDetail;
