@@ -48,6 +48,7 @@ import org.exoplatform.social.core.storage.ActivityStorageException;
 import org.exoplatform.social.webui.activity.UIActivitiesContainer;
 import org.exoplatform.social.webui.composer.PopupContainer;
 import org.exoplatform.social.webui.composer.UIActivityComposer;
+import org.exoplatform.social.webui.composer.UIActivityComposerManager;
 import org.exoplatform.social.webui.composer.UIComposer;
 import org.exoplatform.social.webui.composer.UIComposer.PostContext;
 import org.exoplatform.social.webui.profile.UIUserActivitiesDisplay;
@@ -320,6 +321,10 @@ public class UIDocActivityComposer extends UIActivityComposer implements UISelec
     @Override
     public void execute(Event<UIDocActivityComposer> event) throws Exception {
       final UIDocActivityComposer docActivityComposer = event.getSource();
+      final UIActivityComposer activityComposer = event.getSource().getActivityComposerManager().getCurrentActivityComposer();
+      final UIActivityComposerManager activityComposerManager = event.getSource().getActivityComposerManager();
+      activityComposerManager.setDefaultActivityComposer();
+      activityComposer.setDisplayed(false);
       // Reset values
       docActivityComposer.resetValues();
     }
